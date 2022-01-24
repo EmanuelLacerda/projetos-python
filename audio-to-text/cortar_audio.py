@@ -1,3 +1,5 @@
+from os import makedirs
+
 from tqdm import tqdm
 
 import pydub
@@ -130,7 +132,7 @@ class CorteDoAudio():
 
 		for i in tqdm(
 			range(
-				self.quantidade_de_cortes_de_um_minuto #self.parte_inteira_da_quantidade_de_cortes_de_um_minuto
+				self.quantidade_de_cortes_de_um_minuto
 			)
 		):
 			self.extrair_corte_atual_do_audio(i)
@@ -152,10 +154,30 @@ class ExportacaoDosCortesDoAudio():
 		self.PASTA_CORTES = variaveis_globais.PASTA_CORTES
 
 	def exportar_corte(self, corte, nome_do_corte):
-		corte.export(
-			"{}{}.wav".format(self.PASTA_CORTES, nome_do_corte),
-			format="wav"
-		)
+		try:
+			corte.export(
+				"{}{}.wav".format(self.PASTA_CORTES, nome_do_corte),
+				format="wav"
+			)
+		except FileNotFoundError:
+			"""
+			No GitHub não é possível enviar pastas vazias que é o caso das subpastas "transcricoes/" e "cortes/".
+
+			Devido a isso, quando o usuário for executar o programa logo após ter feito o clone e ter instalado as libs, não haverá essas duas subpastas.
+
+			Além disso, pode acontecer do usuário, intencionalmente ou não, remover uma dessas subpastas ou até as duas.
+
+			Assim, é necessário que essas subpastas sejam criadas sempre que elas não existirem na pasta raiz.
+
+			A linha de código abaixo faz a criação da subpasta "cortes/". A criação da outra subpasta ocorre em outro momento da execução.
+			"""
+			makedirs("cortes/")
+
+			corte.export(
+				"{}{}.wav".format(self.PASTA_CORTES, nome_do_corte),
+				format="wav"
+			)
+
 
 	def __call__(self):
 		quantidade_de_cortes = len(self.lista_de_cortes)

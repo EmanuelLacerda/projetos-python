@@ -6,7 +6,7 @@ Este é o repositório em que estarão guardados alguns dos projetos pessoais qu
 
 | Nome          | Descrição                                                    | Link                                                         |
 | ------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Audio to Text | Programa de *CLI* desenvolvido em Python que realiza a transcrição de áudios utilizando a lib *speech recognition*. | [link](https://github.com/EmanuelLacerda/projetos-python/audio-to-text) |
+| Audio to Text | Programa de *CLI* desenvolvido em Python que realiza a transcrição de áudios utilizando a lib *speech recognition*. | [link](https://github.com/EmanuelLacerda/projetos-python/tree/main/audio-to-text) |
 
 
 

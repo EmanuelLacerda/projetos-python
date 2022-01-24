@@ -1,0 +1,11 @@
+node_modules/
+
+roadmap.md
+
+package.json
+package-lock.json
+
+audio-to-text/__pycache__/
+
+audio-to-text/ideias-para-o-futuro.txt
+

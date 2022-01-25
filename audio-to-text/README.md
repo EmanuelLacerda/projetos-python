@@ -54,15 +54,23 @@ A transcrição da lib *speech recognition*, e por conseguinte do ***Audio to Te
 
 ## Instalação
 
-Para instalar primeiramente clone o repositório do *Audio to Text* que está no *GitHub* na pasta que você desejar.
+Para instalar primeiramente clone na pasta que você desejar o repositório do "projetos python" que está no *GitHub*. Como os arquivos de *Audio to Text* estão dentro do repositório "projetos python", não é possível ter um clone com somente os arquivos do programa em questão.
 
 ```shell
-git clone https://github.com/EmanuelLacerda/audio-to-text
+git clone https://github.com/EmanuelLacerda/projetos-python
 ```
 
 
 
-Depois realize a instalação das libs necessárias por meio do comando pip.
+Depois entre, via terminal, na pasta raiz do *Audio to Text* por meio do comando abaixo.
+
+```shell
+cd projetos-python/audio-to-text
+```
+
+
+
+Agora que está dentro da pasta raiz, instale as libs necessárias por meio do comando pip.
 
 ```shell
 pip install -r requirements.txt
@@ -116,7 +124,7 @@ No método montar_identificador_do_audio da classe ExtracaoDoNomeDoAudio que est
 
 **Obs. 1** Não obrigatoriamente o usuário terá que utilizar o comando "python3.5". Ele deve utilizar o comando que executa o código *python* na versão 3.5 do mesmo. Em relação a utilizar uma versão do *Python* que é diferente da 3.5 para executar o *Audio to Text*, leia as observações do tópico **"Requisitos"**.
 
-**Obs. 2:** Para uma melhor experiência do usuário, é essencial que nenhum dos arquivos da subpasta "transcricoes/" seja deletado, apenas copiado para outra pasta. A leitura do tópico **"Vantagens"** tornará  claro o motivo de deletar arquivos de "transcricoes/"  prejudicar a sua experiência como usuário.
+**Obs. 2:** Para uma melhor experiência do usuário, é essencial que nenhum dos arquivos da subpasta "transcricoes/" seja deletado, apenas copiado para outra pasta. A leitura do tópico **"Estratégias para diminuir o tempo de transcrição"** tornará  claro o motivo de deletar arquivos de "transcricoes/"  prejudicar a sua experiência como usuário.
 
 **Obs. 3:** Eu uso o *LibreOffice* e prefiro que o documento de transcrição seja um arquivo *LibreOffice Write*. Caso você não use o *LibreOffice* e/ou não queira que a extensão deste documento seja ".odt", basta ir até o método montar_nome_do_documento_contendo_a_transcricao_do_corte da classe Transcricoes que está presente no arquivo transcricoes.py. Dentro deste método, altere ".odt" pela extensão que for mais adequada para você. Só lembrando que esta nova extensão deve ser uma extensão de texto.
 

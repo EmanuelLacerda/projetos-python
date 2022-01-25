@@ -108,7 +108,9 @@ python3.5 main.py [caminho-do-audio-1-que-sera-transcrito] [caminho-do-audio-2-q
 
 
 
-Quando a transcrição do(s) arquivo(s) finalizar, basta ir na subpasta "transcricoes/" e, em seguida, copiar para a pasta desejada o documento contendo a transcrição de cada arquivo transcrito. O nome do documento que contém a transcrição de um dado arquivo de áudio será  "doc_de_transcricao_de_nome-do-arquivo-de-audio-que-foi-transcrito.odt".
+Quando a transcrição do(s) arquivo(s) finalizar, basta ir na subpasta "transcricoes/" e, em seguida, copiar para a pasta desejada o documento contendo a transcrição de cada arquivo transcrito. O nome do documento que contém a transcrição de um dado arquivo de áudio será  "doc_de_transcricao_de_identificador_do_audio.odt". O identificado do áudio é composto por o nome da pasta em que está o áudio, o nome do áudio e a extensão do áudio, com um "_" entre as palavras.
+
+No método montar_identificador_do_audio da classe ExtracaoDoNomeDoAudio que está presente no arquivo transcricoes.py, há a explicação do motivo do identificador ser composto por essas informações. Antes é recomendado ler o tópico **"Estratégias para diminuir o tempo de transcrição"**.
 
 
 
@@ -116,7 +118,7 @@ Quando a transcrição do(s) arquivo(s) finalizar, basta ir na subpasta "transcr
 
 **Obs. 2:** Para uma melhor experiência do usuário, é essencial que nenhum dos arquivos da subpasta "transcricoes/" seja deletado, apenas copiado para outra pasta. A leitura do tópico **"Vantagens"** tornará  claro o motivo de deletar arquivos de "transcricoes/"  prejudicar a sua experiência como usuário.
 
-**Obs. 3:** Eu uso o *LibreOffice* e prefiro que o documento de transcrição seja um arquivo *LibreOffice Write*. Caso você não use o *LibreOffice* e/ou não queira que a extensão deste documento seja ".odt", basta procurar por `"doc_de_transcricao_de_{}.odt".format(nome_do_corte.replace(".wav","")) ` no arquivo transcricoes.py e, em seguida, substituir o "odt" por a extensão que deseja. Só lembrando que esta nova extensão deve ser uma extensão de texto.
+**Obs. 3:** Eu uso o *LibreOffice* e prefiro que o documento de transcrição seja um arquivo *LibreOffice Write*. Caso você não use o *LibreOffice* e/ou não queira que a extensão deste documento seja ".odt", basta ir até o método montar_nome_do_documento_contendo_a_transcricao_do_corte da classe Transcricoes que está presente no arquivo transcricoes.py. Dentro deste método, altere ".odt" pela extensão que for mais adequada para você. Só lembrando que esta nova extensão deve ser uma extensão de texto.
 
 
 

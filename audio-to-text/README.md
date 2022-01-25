@@ -207,7 +207,7 @@ O print abaixo mostra qual a mensagem de erro que é mostrada quando ocorre o E3
 
 Pode acontecer de um áudio passado como parâmetro já ter sido em parte ou totalmente transcrito. Nestes casos, é importante que o programa de transcrição consiga distinguir quais trechos já foram e quais trechos ainda não foram transcritos.
 
-Conseguindo distinguir ambos, o programa vai gastar tempo computacional somente com os trechos realmente precisam ser transcritos. Dessa maneira, o tempo computacional gasto com um áudio parcialmente ou totalmente já transcrito vai ser menor do que o gasto com um áudio 0% transcrito.
+Conseguindo distinguir ambos, o programa vai gastar tempo computacional somente com os trechos  que realmente precisam ser transcritos. Dessa maneira, o tempo computacional gasto com um áudio parcialmente ou totalmente já transcrito vai ser menor do que o gasto com um áudio 0% transcrito.
 
 O *Audio to Text* consegue realizar essa distinção para áudios parcialmente e para áudios totalmente transcritos conforme as explicações abaixo.
 
@@ -259,7 +259,7 @@ O print abaixo mostra qual a mensagem mostrada quando o áudio passado como par�
 
 Hoje meu foco é frontend. Devido a isso, não consigo, no momento, me dedicar tanto a esse e os outros projetos que desenvolvi anteriormente com *Python*. Porém, se você encontrar algum erro ou tiver algum problema com o uso do mesmo, pode abrir um issues aqui e me avisar por um dos meios de contato que vou deixar abaixo. Resolverei o *issues* o mais cedo que for possível.
 
-Se quiser fazer a sua própria versão do *Audio to Text* e libera-la aqui no *GitHub*, sinta-se à vontade. Só peço que no README explicite que você se baseou neste. 
+Se quiser fazer a sua própria versão do *Audio to Text* e libera-la aqui no *GitHub*, sinta-se à vontade. Só peço que no README deixe claro que você se baseou neste. Também peço que me avise no caso de você fazer uma outra versão do *Audio to Text*. Gostarei de vê os projetos baseado neste.
 
 
 
